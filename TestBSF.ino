@@ -46,6 +46,7 @@ void setup() {
   Serial.println(DDRD, BIN);    //100000
   Serial.println(PORTD, BIN);   //100000
   Serial.println(PIND, BIN);    //110000
+  DDRD = DDRD | 100000;
   PORTD = B111111;
   Serial.println(DDRD, BIN);
   Serial.println(PORTD, BIN);
