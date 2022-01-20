@@ -42,6 +42,15 @@ void setup() {
 
   DEBUGln(F("Проверка платы BSFrance LoRa32u4"));
   DEBUGln(F("Проверка измерителя напряжения батареи"));
+
+  Serial.println(DDRD, BIN);    //100000
+  Serial.println(PORTD, BIN);   //100000
+  Serial.println(PIND, BIN);    //110000
+  PORTD = B111111;
+  Serial.println(DDRD, BIN);
+  Serial.println(PORTD, BIN);
+  Serial.println(PIND, BIN);
+  
   while (1) {
     EVERY_MS(BATTERY_PERIOD) {
       showBatteryVoltage();
@@ -50,7 +59,7 @@ void setup() {
 }////main()
 
 void loop() {
-  
+
 }
 
 void showBatteryVoltage() {
